@@ -25,6 +25,16 @@ The project is still in progress. The following features are yet to be integrate
 
 - **League of Legends API**: Integration for retrieving in-game data such as characters, abilities, lore, etc.
 
+## 📷 Screenshots
+<div style="display: flex; flex-wrap: wrap;">
+  <img src="https://github.com/user-attachments/assets/ae3ea1d1-3018-42fb-b938-427915dcbae7" width="150" style="margin: 10px;"/>
+  <img src="https://github.com/user-attachments/assets/1fcc689e-68b1-44ef-bd2e-97df1678d338" width="150" style="margin: 10px;"/>
+  <img src="https://github.com/user-attachments/assets/a32c3d94-9234-4e56-a685-ea43f8529f29" width="150" style="margin: 10px;"/>
+  <img src="https://github.com/user-attachments/assets/9e7cc3cc-f24a-4fa7-b301-6b74786d246c" width="150" style="margin: 10px;"/>
+  <img src="https://github.com/user-attachments/assets/57900787-7908-4527-a362-2b7c5e29904d" width="150" style="margin: 10px;"/>
+  <img src="https://github.com/user-attachments/assets/969cd2f8-4bc9-449a-a3e1-4aa14296a899" width="150" style="margin: 10px;"/>
+</div>
+
 ## Installation
 
 Clone the repository:
