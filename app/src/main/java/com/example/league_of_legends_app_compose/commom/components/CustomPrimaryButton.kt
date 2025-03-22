@@ -19,7 +19,7 @@ fun CustomPrimaryButton(
     modifier: Modifier = Modifier
 ) {
     ElevatedButton(
-        modifier = modifier.fillMaxWidth().padding(horizontal = 16.dp).height(56.dp),
+        modifier = modifier.fillMaxWidth().height(56.dp),
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(
             containerColor = PrimaryButton

@@ -1,7 +1,9 @@
 package com.example.league_of_legends_app_compose.features.onboarding.presentation
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,12 +31,22 @@ import com.example.league_of_legends_app_compose.commom.components.CustomSeconda
 import com.example.league_of_legends_app_compose.commom.theme.Background
 
 @Composable
-fun Onboarding4Screen() {
-    Onboarding4Content()
+fun Onboarding4Screen(
+    navigateToSignUp: () -> Unit,
+    navigateToLogin: () -> Unit
+) {
+    Onboarding4Content(
+        navigateToSignUp = navigateToSignUp,
+        navigateToLogin = navigateToLogin
+    )
 }
 
 @Composable
-private fun Onboarding4Content() {
+private fun Onboarding4Content(
+    navigateToSignUp: () -> Unit,
+    navigateToLogin: () -> Unit
+) {
+    BackHandler(enabled = true) {}
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -76,13 +88,13 @@ private fun Onboarding4Content() {
                 textAlign = TextAlign.Center
             )
             Spacer(Modifier.height(20.dp))
-            CustomPrimaryButton(title = "Inscreva-se gratuitamente")
+            CustomPrimaryButton(title = "Inscreva-se gratuitamente", onClick = navigateToSignUp, modifier = Modifier.padding(horizontal = 16.dp))
             Spacer(Modifier.height(10.dp))
             CustomSecondaryButton(icone = R.drawable.ic_google, title = "Continuar com o Google")
             Spacer(Modifier.height(10.dp))
             CustomSecondaryButton(icone = R.drawable.ic_riot, title = "Continuar com a Riot")
             Spacer(Modifier.height(30.dp))
-            Text("Entrar", color = Color.White, fontWeight = FontWeight.Bold)
+            Text("Entrar", color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.clickable { navigateToLogin() })
 
         }
     }
@@ -91,5 +103,5 @@ private fun Onboarding4Content() {
 @Preview(showBackground = true)
 @Composable
 private fun Onboarding4Preview() {
-    Onboarding4Screen()
+    Onboarding4Screen({},{})
 }

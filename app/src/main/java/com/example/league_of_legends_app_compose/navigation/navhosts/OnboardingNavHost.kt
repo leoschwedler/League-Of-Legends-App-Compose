@@ -7,16 +7,15 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.league_of_legends_app_compose.commom.extensions.slideInTo
 import com.example.league_of_legends_app_compose.commom.extensions.slideOutTo
+import com.example.league_of_legends_app_compose.features.login.presentation.ui.LoginScreen
 import com.example.league_of_legends_app_compose.features.onboarding.presentation.Onboarding1Screen
 import com.example.league_of_legends_app_compose.features.onboarding.presentation.Onboarding2Screen
 import com.example.league_of_legends_app_compose.features.onboarding.presentation.Onboarding3Screen
 import com.example.league_of_legends_app_compose.features.onboarding.presentation.Onboarding4Screen
+import com.example.league_of_legends_app_compose.features.signup.presentation.ui.SignUpScreen
 import com.example.league_of_legends_app_compose.features.splash.ui.SplashScreen
-import com.example.league_of_legends_app_compose.navigation.routes.OnboardingRoute.Onboarding1Route
-import com.example.league_of_legends_app_compose.navigation.routes.OnboardingRoute.Onboarding2Route
-import com.example.league_of_legends_app_compose.navigation.routes.OnboardingRoute.Onboarding3Route
-import com.example.league_of_legends_app_compose.navigation.routes.OnboardingRoute.Onboarding4Route
-import com.example.league_of_legends_app_compose.navigation.routes.OnboardingRoute.SplashScreenRoute
+import com.example.league_of_legends_app_compose.navigation.routes.OnboardingRoute
+import com.example.league_of_legends_app_compose.navigation.routes.OnboardingRoute.*
 
 @Composable
 fun OnboardingNavHost() {
@@ -24,6 +23,7 @@ fun OnboardingNavHost() {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = SplashScreenRoute) {
+
         composable<SplashScreenRoute>(
             enterTransition = {
                 this.slideInTo(AnimatedContentTransitionScope.SlideDirection.Left)
@@ -76,7 +76,11 @@ fun OnboardingNavHost() {
         ) {
             Onboarding3Screen(
                 navigatoToOnboarding4 = {
-                    navController.navigate(Onboarding4Route)
+                    navController.navigate(Onboarding4Route){
+                        popUpTo(SplashScreenRoute){
+                            inclusive = true
+                        }
+                    }
                 }
             )
         }
@@ -88,9 +92,42 @@ fun OnboardingNavHost() {
                 this.slideOutTo(AnimatedContentTransitionScope.SlideDirection.Right)
             }
         ) {
-            Onboarding4Screen()
+            Onboarding4Screen(
+
+                navigateToSignUp = {
+                    navController.navigate(SignUpRoute)
+                },
+                navigateToLogin = {
+                    navController.navigate(LoginRoute)
+                }
+            )
         }
+        composable<SignUpRoute>(
+            enterTransition = {
+                this.slideInTo(AnimatedContentTransitionScope.SlideDirection.Left)
+            },
+            exitTransition = {
+                this.slideOutTo(AnimatedContentTransitionScope.SlideDirection.Right)
+            }
+        ) {
+            SignUpScreen(
+                onbackPressed = {
+                    navController.popBackStack()
+                },
+                navigateToHome = {
+                    navController.navigate(LoginRoute)
+                }
+            )
+        }
+        composable<LoginRoute> {
+            LoginScreen(
+                onbackPressed = {
+                    navController.navigate(Onboarding4Route)
+                },
+                navigateToHome = {
 
-
+                }
+            )
+        }
     }
 }

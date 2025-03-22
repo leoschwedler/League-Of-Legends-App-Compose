@@ -14,5 +14,11 @@ sealed class OnboardingRoute {
     data object Onboarding3Route: OnboardingRoute()
     @Serializable
     data object Onboarding4Route: OnboardingRoute()
+    @Serializable
+    data object SignUpRoute: OnboardingRoute()
+    @Serializable
+    data object LoginRoute: OnboardingRoute()
+
+
 
 }

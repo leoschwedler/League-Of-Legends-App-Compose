@@ -71,7 +71,7 @@ private fun Onboarding3Content(navigatoToOnboarding4: () -> Unit) {
                 textAlign = TextAlign.Center
             )
             Spacer(Modifier.height(50.dp))
-            CustomPrimaryButton(title = "Vamos lá", onClick = navigatoToOnboarding4)
+            CustomPrimaryButton(title = "Vamos lá", onClick = navigatoToOnboarding4, modifier = Modifier.padding(horizontal = 20.dp))
 
         }
     }

@@ -42,7 +42,7 @@ fun SplashScreen(naviteToOnboarding1: () -> Unit) {
 private fun SplashContent() {
 
     val composition by rememberLottieComposition(LottieCompositionSpec.Asset("loading.json"))
-    val progress by animateLottieCompositionAsState(composition)
+
 
     Column(
         Modifier
@@ -64,7 +64,6 @@ private fun SplashContent() {
                 .size(200.dp),
             iterations = LottieConstants.IterateForever,
             maintainOriginalImageBounds = true
-
         )
     }
 }
