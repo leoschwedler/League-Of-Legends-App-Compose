@@ -68,6 +68,7 @@ private fun Onboarding1Content(
                         "campeões",
                 color = Color.White,
                 fontSize = 32.sp,
+                lineHeight = 30.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center
             )

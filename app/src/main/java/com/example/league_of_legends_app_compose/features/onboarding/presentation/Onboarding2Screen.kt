@@ -63,6 +63,7 @@ private fun Onboarding2Content(naviteToOnboarding3: () -> Unit) {
                 text = "Suba de elo\n" +
                         "rápido",
                 color = Color.White,
+                lineHeight = 30.sp,
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center
@@ -74,6 +75,7 @@ private fun Onboarding2Content(naviteToOnboarding3: () -> Unit) {
                         "tudo sobre os campeões.",
                 color = Color.Gray,
                 fontSize = 14.sp,
+
                 fontWeight = FontWeight.Normal,
                 textAlign = TextAlign.Center
             )

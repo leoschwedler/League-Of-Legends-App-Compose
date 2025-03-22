@@ -1,6 +1,7 @@
 package com.example.league_of_legends_app_compose.commom.components
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -39,14 +40,13 @@ fun CustomSecondaryButton(
         ),
         shape = MaterialTheme.shapes.small
     ) {
-        Row(
+        Box(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.Start,
-            verticalAlignment = Alignment.CenterVertically
+
         ) {
             Icon(painter = painterResource(icone), contentDescription = null, modifier = Modifier.size(24.dp))
-            Spacer(Modifier.width(50.dp))
-            Text(title)
+
+            Text(title, modifier.align(Alignment.Center))
         }
     }
 }

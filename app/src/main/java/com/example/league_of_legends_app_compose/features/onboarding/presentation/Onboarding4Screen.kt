@@ -62,6 +62,7 @@ private fun Onboarding4Content() {
                 modifier = Modifier.padding(top = 20.dp),
                 text = "Escolha os\n campeões certos",
                 color = Color.White,
+                lineHeight = 30.sp,
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center

@@ -55,6 +55,7 @@ private fun Onboarding3Content(navigatoToOnboarding4: () -> Unit) {
                 text = "Divirta-se",
                 color = Color.White,
                 fontSize = 32.sp,
+                lineHeight = 30.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center
             )
@@ -64,6 +65,7 @@ private fun Onboarding3Content(navigatoToOnboarding4: () -> Unit) {
                         "te levar para o próximo nível \n" +
                         "no lolzinho.",
                 color = Color.Gray,
+
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Normal,
                 textAlign = TextAlign.Center
