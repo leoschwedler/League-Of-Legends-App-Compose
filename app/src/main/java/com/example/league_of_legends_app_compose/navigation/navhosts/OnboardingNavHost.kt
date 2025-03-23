@@ -14,6 +14,7 @@ import com.example.league_of_legends_app_compose.features.onboarding.presentatio
 import com.example.league_of_legends_app_compose.features.onboarding.presentation.Onboarding4Screen
 import com.example.league_of_legends_app_compose.features.signup.presentation.ui.SignUpScreen
 import com.example.league_of_legends_app_compose.features.splash.ui.SplashScreen
+import com.example.league_of_legends_app_compose.navigation.routes.MainRoute
 import com.example.league_of_legends_app_compose.navigation.routes.OnboardingRoute
 import com.example.league_of_legends_app_compose.navigation.routes.OnboardingRoute.*
 
@@ -125,9 +126,10 @@ fun OnboardingNavHost() {
                     navController.navigate(Onboarding4Route)
                 },
                 navigateToHome = {
-
+                    navController.navigate(MainRoute.HomeRoute)
                 }
             )
         }
+        mainNavHost(navController = navController)
     }
 }
