@@ -43,4 +43,4 @@ The project is still in progress. The following features are yet to be integrate
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/league-of-legends-onboarding-app.git
+git clone https://github.com/leoschwedler/league-of-legends-onboarding-app.git
